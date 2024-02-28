@@ -44,7 +44,8 @@ OPTIONS.forEach(e => {
 })
 
 function putFlag(index) {
-    IMAGE.setAttribute("src", `https://flagcdn.com/1/${countryCodes[index]}.png`);
+    IMAGE.setAttribute("src", `https://flagcdn.com/128x96/${countryCodes[index]}.png`);
+    countryCodes.splice(index,1);
 }
 
 async function getCountries() {
