@@ -84,7 +84,6 @@ function enableButtons() {
 }
 
 function updateScore(){
-    MANY.textContent = `${many}/306`;
     RIGHT.textContent = `Right:${right}`;
     WRONG.textContent = `wrong:${wrong}`
 }
