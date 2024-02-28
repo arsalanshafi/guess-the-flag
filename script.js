@@ -2,12 +2,10 @@ const IMAGE = document.querySelector("img");
 const NEXT = document.querySelector(".nxt");
 const OPTIONS = Array.from(document.querySelectorAll(".option"));
 const MSG = document.querySelector(".msg");
-const MANY = document.querySelector(".many");
 const RIGHT = document.querySelector(".right");
 const WRONG = document.querySelector(".wrong");
 
 let correct;
-let many = 1;
 let right = 0;
 let wrong = 0;
 
@@ -16,8 +14,6 @@ let countryNames;
 let countryCodes;
 
 NEXT.addEventListener("click", () => {
-    many++;
-    updateScore();
     MSG.textContent = "";
     getRandomNumbers();
     enableButtons();
@@ -46,7 +42,6 @@ OPTIONS.forEach(e => {
 
 function putFlag(index) {
     IMAGE.setAttribute("src", `https://flagcdn.com/128x96/${countryCodes[index]}.png`);
-    countryCodes.splice(index,1);
 }
 
 async function getCountries() {
