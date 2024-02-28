@@ -17,6 +17,7 @@ let countryCodes;
 
 NEXT.addEventListener("click", () => {
     many++;
+    updateScore();
     MSG.textContent = "";
     getRandomNumbers();
     enableButtons();
