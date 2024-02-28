@@ -1,5 +1,7 @@
 
-
+*{
+    font-family: system-ui;
+}
 .container{
     width: max-content;
     display: flex;
@@ -9,6 +11,7 @@
 
 .scores{
     display: flex;
+    margin-block:10px
 }
 .score{
     margin-inline:10px;
