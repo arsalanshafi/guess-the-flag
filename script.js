@@ -41,7 +41,7 @@ OPTIONS.forEach(e => {
 })
 
 function putFlag(index) {
-    IMAGE.setAttribute("src", `https://flagcdn.com/128x96/${countryCodes[index]}.png`);
+    IMAGE.setAttribute("src", `https://flagcdn.com/w160/${countryCodes[index]}.png`);
 }
 
 async function getCountries() {
@@ -49,13 +49,15 @@ async function getCountries() {
     data = await blob.json();
     countryCodes = Object.keys(data);
     countryNames = Object.values(data);
+    console.log(countryCodes);
+    console.log(countryNames);
 }
 
 function getRandomNumbers() {
     const random = [];
     while (random.length < 4) {
-        let num = Math.random() * countryCodes.length;
-        if (!random.includes(num)) random.push(Math.floor(num));
+        let num = Math.floor(Math.random() * countryCodes.length);
+        if (!random.includes(num)) random.push(num);
     }
     // await getCountries();
     correct = countryNames[random[0]];
